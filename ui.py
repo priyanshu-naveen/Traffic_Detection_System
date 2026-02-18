@@ -22,7 +22,7 @@ def load_model():
     from ultralytics import YOLO
     return YOLO("best.pt")
 
-
+model = load_model() 
 DEVICE = "cpu"   # Streamlit cloud runs on CPU
 
 # ---------------- VEHICLE COUNT FUNCTION ----------------
@@ -176,4 +176,5 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
+
 
