@@ -6,5 +6,4 @@ pillow
 torch
 streamlit-webrtc
 av
-python
 
