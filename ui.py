@@ -1,5 +1,4 @@
 import streamlit as st
-from ultralytics import YOLO
 import cv2
 import numpy as np
 from PIL import Image
@@ -20,9 +19,9 @@ st.set_page_config(
 # ---------------- LOAD MODEL ----------------
 @st.cache_resource
 def load_model():
+    from ultralytics import YOLO
     return YOLO("best.pt")
 
-model = load_model()
 
 DEVICE = "cpu"   # Streamlit cloud runs on CPU
 
@@ -177,3 +176,4 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
+
